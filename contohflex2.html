@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh Flexbox Layout - Sticky Header</title>
+  <style>
+    /* ====== GAYA DASAR ====== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    /* ====== HEADER ====== */
+    header {
+      background-color: #237dad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;   /* agar tetap di atas */
+      top: 0;             /* menempel di bagian atas */
+      z-index: 1000;      /* agar tidak tertutup elemen lain */
+    }
+
+    /* ====== NAVIGASI ====== */
+    nav {
+      background-color: #125d8a;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      position: sticky;   /* agar tetap terlihat di bawah header */
+      top: 70px;          /* posisi relatif setelah header */
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      background-color: #1f78b4;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #0b4f70;
+    }
+
+    /* ====== FLEXBOX UTAMA ====== */
+    .container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Sidebar kiri */
+    .sidebar {
+      flex: 1;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    /* Konten utama */
+    .content {
+      flex: 3;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #237dad;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* ====== RESPONSIF ====== */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Universitas Tugu Muda</h1>
+    <p>Membangun Generasi Unggul dan Berkarakter</p>
+  </header>
+
+  <!-- NAVIGASI -->
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Profil</a>
+    <a href="#">Program Studi</a>
+    <a href="#">Galeri</a>
+    <a href="#">Kontak</a>
+  </nav>
+
+  <!-- KONTEN FLEXBOX -->
+  <div class="container">
+    <div class="sidebar">
+      <h3>Menu Samping</h3>
+      <ul>
+        <li>Informasi Kampus</li>
+        <li>Fakultas & Prodi</li>
+        <li>Beasiswa</li>
+        <li>Galeri Kegiatan</li>
+        <li>Kerjasama Industri</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Selamat Datang di Universitas Tugu Muda (UTM)</h2>
+      <p>
+        Universitas Tugu Muda (UTM) adalah perguruan tinggi yang berkomitmen mencetak generasi unggul dan berdaya saing tinggi. 
+        Melalui pendekatan pendidikan berbasis kompetensi, mahasiswa dilatih untuk menguasai teori dan praktik sekaligus.
+      </p>
+
+      <p>
+        Dengan penerapan layout modern seperti Flexbox, halaman web dapat terlihat rapi dan mudah menyesuaikan diri di berbagai ukuran layar — baik komputer, tablet, maupun smartphone.
+      </p>
+
+      <h3>Visi dan Misi</h3>
+      <p>
+        Visi UTM adalah menjadi universitas berkelas nasional dengan keunggulan di bidang teknologi dan kewirausahaan.
+        Misinya mencakup peningkatan kualitas pendidikan, penelitian, dan pengabdian masyarakat.
+      </p>
+
+      <h3>Kegiatan Kampus</h3>
+      <p>
+        Berikut adalah beberapa kegiatan unggulan kampus:
+      </p>
+      <ul>
+        <li>Seminar Nasional Teknologi Informasi</li>
+        <li>Program Beasiswa Prestasi dan Riset</li>
+        <li>Kuliah Tamu bersama praktisi industri</li>
+        <li>Pelatihan Softskill dan Leadership</li>
+      </ul>
+
+      <h3>Testimoni Mahasiswa</h3>
+      <p>
+        "UTM memberikan saya pengalaman belajar yang tidak hanya fokus pada teori, tetapi juga praktik di lapangan. Dosen-dosennya inspiratif!" — <b>Tio, Mahasiswa Sistem Informasi</b>
+      </p>
+
+      <h3>Berita Kampus Terbaru</h3>
+      <p>
+        UTM baru saja meresmikan <b>Laboratorium Inovasi Digital</b> yang dilengkapi dengan perangkat modern untuk mendukung riset mahasiswa.
+        Selain itu, universitas juga menjalin kerja sama dengan beberapa perusahaan startup di Indonesia.
+      </p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Universitas Tugu Muda | Semua Hak Dilindungi
+  </footer>
+
+</body>
+</html>

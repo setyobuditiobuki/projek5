@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header Responsif dengan Flexbox</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* HEADER UTAMA */
+  header {
+    background-color: #237dad;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* logo di kiri, menu di kanan */
+    align-items: center;
+    padding: 10px 30px;
+    position: fixed;     /* agar tidak tergulung saat di-scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* LOGO */
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  /* NAVIGASI */
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Tambah jarak agar konten tidak tertutup header */
+  main {
+    margin-top: 70px;
+    padding: 20px;
+  }
+
+  /* RESPONSIVE DESIGN: ketika layar sempit */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    nav {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      display: block;
+      width: 100%;
+      background-color: #1b6390;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🌐 MyWebsite</div>
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Profil</a>
+    <a href="#">Layanan</a>
+    <a href="#">Kontak</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Selamat Datang di Situs Kami</h2>
+  <p>Ini adalah contoh header yang menggunakan Flexbox dan tetap tampil rapi meskipun di-zoom atau diakses dari layar kecil.</p>
+</main>
+
+</body>
+</html>

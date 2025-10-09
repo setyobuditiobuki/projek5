@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universitas Tugu Muda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    /* HEADER TETAP */
+    header {
+      background-color: #237dad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* MENU NAVIGASI */
+    nav {
+      background-color: #125d8a;
+      display: flex;  
+      justify-content: center;
+      padding: 12px;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      background-color: #1f78b4;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #0b4f70;
+    }
+
+    /* BANNER GAMBAR */
+    .banner {
+      margin-top: 130px; /* agar tidak tertutup header + nav */
+      width: 100%;
+      height: 300px;
+      background-image: url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 5px solid #237dad;
+    }
+
+    /* LAYOUT UTAMA FLEXBOX */
+    .container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .sidebar h3 {
+      border-bottom: 2px solid #237dad;
+      padding-bottom: 5px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .sidebar ul li {
+      margin: 8px 0;
+      padding: 6px;
+      border-radius: 5px;
+      background-color: #e9f4fb;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #d3e9f7;
+      cursor: pointer;
+    }
+
+    .content {
+      flex: 3;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .content h2 {
+      color: #125d8a;
+    }
+
+    footer {
+      background-color: #237dad;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        margin: 5px 3px;
+      }
+
+      .banner {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Universitas Tugu Muda</h1>
+  </header>
+
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Profil</a>
+    <a href="#">Program Studi</a>
+    <a href="#">Berita</a>
+    <a href="#">Kontak</a>
+  </nav>
+
+  <!-- Banner Gambar -->
+  <div class="banner"></div>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Menu Samping</h3>
+      <ul>
+        <li>Informasi Kampus</li>
+        <li>Fakultas & Prodi</li>
+        <li>Beasiswa</li>
+        <li>Galeri</li>
+      </ul>
+
+      <h3>Berita Terbaru</h3>
+      <ul>
+        <li>Wisuda Periode Oktober 2025</li>
+        <li>UTM Gelar Seminar AI Nasional</li>
+        <li>Pendaftaran Mahasiswa Baru 2026 Dibuka</li>
+      </ul>
+
+      <h3>Agenda Kampus</h3>
+      <ul>
+        <li>10 Okt: Lomba Inovasi Mahasiswa</li>
+        <li>15 Okt: Kuliah Umum Teknologi Hijau</li>
+        <li>25 Okt: Festival Seni Kampus</li>
+      </ul>
+
+      <h3>Kontak</h3>
+      <p>
+        📍 Jl. Diponegoro No. 45, Semarang<br>
+        ☎️ (024) 7654321<br>
+        ✉️ info@utm.ac.id
+      </p>
+    </div>
+
+    <div class="content">
+      <h2>Selamat Datang di UTM</h2>
+      <p align="justify">
+        Universitas Tugu Muda (UTM) adalah perguruan tinggi yang berkomitmen mencetak generasi unggul dan berdaya saing tinggi. 
+        Melalui pendekatan pendidikan berbasis kompetensi, mahasiswa dilatih untuk menguasai teori dan praktik sekaligus.
+      </p>
+      
+      <p align="justify">
+        Dengan penerapan layout modern seperti <strong>Flexbox</strong>, halaman web dapat terlihat rapi dan mudah menyesuaikan diri 
+        di berbagai ukuran layar — baik komputer, tablet, maupun smartphone.
+      </p>
+
+      <h2>Visi & Misi</h2>
+      <p align="justify">
+        Visi Universitas Tugu Muda adalah menjadi universitas unggul di bidang teknologi, inovasi, dan kewirausahaan yang berlandaskan nilai-nilai kebangsaan.
+      </p>
+      <ul>
+        <li>Menyelenggarakan pendidikan bermutu.</li>
+        <li>Meningkatkan penelitian berbasis teknologi.</li>
+        <li>Membangun kolaborasi dengan industri.</li>
+      </ul>
+
+      <h2>Program Studi Unggulan</h2>
+      <p>
+        - Sistem Informasi<br>
+        - Teknik Informatika<br>
+        - Manajemen<br>
+        - Akuntansi<br>
+        - Desain Komunikasi Visual
+      </p>
+
+      <h2>Kehidupan Kampus</h2>
+      <p align="justify">
+        Kehidupan di kampus UTM sangat dinamis dan penuh semangat. Mahasiswa didorong untuk aktif dalam kegiatan organisasi, riset, dan kewirausahaan.
+        Lingkungan kampus yang hijau dan ramah membuat proses belajar menjadi lebih menyenangkan dan produktif.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Universitas Tugu Muda | Semua Hak Dilindungi
+  </footer>
+
+</body>
+</html>

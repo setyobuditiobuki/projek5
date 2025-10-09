@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh Flexbox Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #237dad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #125d8a;
+      display: flex;  
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      background-color: #1f78b4;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #0b4f70;
+    }
+
+    /* Bagian utama dengan Flexbox */
+    .container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .content {
+      flex: 3;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #237dad;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* Responsif dengan media query */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Universitas Tugu Muda</h1>
+  </header>
+
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Profil</a>
+    <a href="#">Program Studi</a>
+    <a href="#">Kontak</a>
+  </nav>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Menu Samping</h3>
+      <ul>
+        <li>Informasi Kampus</li>
+        <li>Fakultas & Prodi</li>
+        <li>Beasiswa</li>
+        <li>Galeri</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Selamat Datang di UTM</h2>
+      <p align="justify">
+        Universitas Tugu Muda (UTM) adalah perguruan tinggi yang berkomitmen mencetak generasi unggul dan berdaya saing tinggi. 
+        Melalui pendekatan pendidikan berbasis kompetensi, mahasiswa dilatih untuk menguasai teori dan praktik sekaligus.
+      </p>
+      
+      <p align="justify">
+        Dengan penerapan layout modern seperti Flexbox, halaman web dapat terlihat rapi dan mudah menyesuaikan diri 
+        di berbagai ukuran layar — baik komputer, tablet, maupun smartphone.
+      </p>
+    </div>
+  </div>
+
+  
+   
+  <footer>
+    &copy; 2025 Universitas Tugu Muda | Semua Hak Dilindungi
+  </footer>
+
+</body>
+</html>

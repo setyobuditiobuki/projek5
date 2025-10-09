@@ -1,0 +1,80 @@
+/* HEADER FLEXBOX */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #237dad;
+  color: white;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* MENU NAVIGASI */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* TOMBOL MENU (untuk HP) */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* KONTEN UTAMA */
+.konten {
+  margin-top: 90px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: #237dad;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+  }
+}
